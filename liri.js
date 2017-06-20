@@ -23,6 +23,10 @@ client.get('statuses/user_timeline', params, function(error, tweets, response) {
     for (i = 0; i < tweets.length; i++) {
       console.log(tweets[i].created_at + ": " + tweets[i].text);
     }
+    for (i = 0; i < tweets.length; i++) {
+      var tweeted = tweets[i].created_at + ": " + tweets[i].text + "\n";
+      fs.appendFile('random.txt', tweeted);
+    }
   } 
 });
 }

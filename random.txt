@@ -1,1 +1,5 @@
 spotify-this-song,"I Want it That Way"
+Sat Jun 17 21:54:41 +0000 2017: which node
+/usr/bin/node
+Sat Jun 17 21:52:52 +0000 2017: Hello World, this is node!
+Sat Jun 17 21:54:01 +0000 2017: npm install twitter
