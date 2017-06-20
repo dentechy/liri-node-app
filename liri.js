@@ -5,6 +5,7 @@
 const fs = require('fs');
 const keys = require('./keys.js');
 const twitter = require('twitter');
+const request = require('request');
 
 var userInput = process.argv[2];
 var movieInput = process.argv[3]
@@ -32,5 +33,14 @@ client.get('statuses/user_timeline', params, function(error, tweets, response) {
 }
 
 else if (userInput === 'movie-this') {
-
+  if (movieInput === undefined) {
+    request('http://www.omdbapi.com/?apikey=40e9cece&t=Mr+Nobody', function (error, response, body) {
+        console.log(body);
+        });
+  }
+  else {
+    request('http://www.omdbapi.com/?apikey=40e9cece&t=' + movieInput, function (error, response, body) {
+        console.log(body);
+        });
+  }
 }
